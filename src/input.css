@@ -1,1 +1,16 @@
 @import "tailwindcss";
+body {
+  transition: background 0.5s ease;
+}
+
+.rainy-bg {
+  background: linear-gradient(to bottom, #a1c4fd, #c2e9fb);
+}
+
+.sunny-bg {
+  background: linear-gradient(to bottom, #fefcea, #f1da36);
+}
+
+.cloudy-bg {
+  background: linear-gradient(to bottom, #d7d2cc, #304352);
+}

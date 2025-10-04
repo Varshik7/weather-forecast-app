@@ -1,14 +1,55 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Forecast App</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/input.css" />
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    <p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus itaque quo consequuntur nam obcaecati. Ut assumenda numquam blanditiis temporibus nihil adipisci asperiores laborum incidunt culpa dicta, sunt rerum! Enim, laborum."</p>
-    Hello world!
-  </h1>
+<body class="bg-gradient-to-br from-sky-100 to-blue-300 min-h-screen flex flex-col items-center justify-start p-6">
+
+  <header class="w-full max-w-3xl text-center mb-6">
+    <h1 class="text-3xl font-bold text-gray-800 mb-2">🌤️ Weather Forecast</h1>
+    <p class="text-gray-600">Check weather by city or your current location</p>
+  </header>
+
+  <main class="w-full max-w-3xl bg-white/80 backdrop-blur-md p-6 rounded-2xl shadow-lg">
+    <!-- Search Section -->
+    <div class="flex flex-col sm:flex-row gap-3 mb-4">
+      <input id="cityInput" type="text" placeholder="Enter city name..." class="flex-grow p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      <button id="searchBtn" class="bg-blue-500 text-white px-5 py-3 rounded-lg hover:bg-blue-600">Search</button>
+      <button id="locationBtn" class="bg-green-500 text-white px-5 py-3 rounded-lg hover:bg-green-600">📍 My Location</button>
+    </div>
+
+    <!-- Recent Searches -->
+    <div id="recentContainer" class="mb-4 hidden">
+      <label class="font-semibold text-gray-700 mr-2">Recent:</label>
+      <select id="recentDropdown" class="p-2 border rounded-lg"></select>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorBox" class="hidden bg-red-100 text-red-700 p-3 rounded-lg mb-4"></div>
+
+    <!-- Current Weather -->
+    <div id="currentWeather" class="text-center mb-6"></div>
+
+    <!-- Unit Toggle -->
+    <div class="flex justify-center items-center mb-6">
+      <label class="mr-2 font-semibold text-gray-700">Temperature Unit:</label>
+      <button id="toggleUnit" class="bg-gray-200 px-4 py-2 rounded-lg hover:bg-gray-300">°C</button>
+    </div>
+
+    <!-- Extended Forecast -->
+    <div id="forecast" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4"></div>
+  </main>
+
+  <footer class="mt-6 text-gray-500 text-sm">
+    © 2025 Weather Forecast App | Developed in JavaScript
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
