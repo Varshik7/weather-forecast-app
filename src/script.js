@@ -1,4 +1,4 @@
-// Commit 6:Add input validation and error handling
+// Commit 7:Create recent city dropdown with localStorage
 const apiKey = "4001eb904fe8618e2c32a814c977d189"; // Replace with your OpenWeatherMap API key
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
