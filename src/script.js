@@ -1,4 +1,4 @@
-// Commit 3: Added Tailwind layout comment
+// Commit 4: Integrated OpenWeatherMap API
 const apiKey = "4001eb904fe8618e2c32a814c977d189"; // Replace with your OpenWeatherMap API key
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
