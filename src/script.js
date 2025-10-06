@@ -1,4 +1,4 @@
-// Commit 5:Add search and location functionality
+// Commit 6:Add input validation and error handling
 const apiKey = "4001eb904fe8618e2c32a814c977d189"; // Replace with your OpenWeatherMap API key
 const cityInput = document.getElementById("cityInput");
 const searchBtn = document.getElementById("searchBtn");
